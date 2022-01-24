@@ -1,0 +1,31 @@
+header.header
+  h1 POLLUTION ALERT
+  div.authentication
+    if !username
+      form(
+        action="/sign-in",
+        method="post"
+        ) 
+        input.user-selection(
+          placeholder="Enter your username",
+          name="username"
+          value= username
+          minlength=3 )
+        button.button-primary(href="#") Login
+      
+      div
+        if message 
+          h2.message= message
+        else
+          span ..or  
+        a(href="sign-up") Sign Up
+        
+      
+        
+    else 
+      h2 #{username}
+      div
+        a(href="/log-out") Log Out
+
+  
+      

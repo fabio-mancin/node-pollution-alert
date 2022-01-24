@@ -1,0 +1,56 @@
+form(
+  action="/add-alert",
+  method="post",
+  enctype="multipart/form-data"
+  ) 
+  div.row.flex-center
+    div.six.columns
+      label(for="username") Who are you?
+      if username !== ""
+        input.u-full-width#username(
+          type="text", 
+          placeholder="Anonymous",
+          name="username"
+          value= username)
+      else
+        input.u-full-width#username(
+          type="text", 
+          placeholder="Anonymous",
+          name="username")
+        
+    div.six.columns
+      label(for="title") Title: 
+      input.u-full-width#title(
+        type="text", 
+        placeholder="Entry name",
+        name="title")
+
+  div.row.flex-center
+    div.six.columns
+      label(for="coordinates") Coordinates - click on the map or the icon!
+      div.coordinates-container
+        input#coordinates(
+          type="text", 
+          placeholder="Lat / Lon",
+          name="coordinates"
+          required)
+        img#geo(alt="Geolocalize me!" data-tooltip="Geolocalize me!")
+
+    div.six.columns
+      label(for="image") Image upload: 
+      input.u-full-width#image(
+        type="file",
+        name="image"
+        required)
+
+  div.row.flex-center
+    div.six.columns.flex-center
+      button.button-primary Add new alert
+    
+    if formMessage
+      div.six.columns.flex-center
+        h2.form-message #{formMessage}
+  
+
+
+  

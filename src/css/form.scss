@@ -1,0 +1,28 @@
+h2, button {
+  margin: 0;
+}
+
+.form-message {
+  color: red;
+}
+
+img {
+  width: 30px;
+}
+
+.coordinates-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  input {
+    width: 85%;
+    height: 100%;
+    margin: 0;
+  }
+  img {
+    width: 10%;
+    height: 100%;
+    cursor: pointer;
+  }
+}

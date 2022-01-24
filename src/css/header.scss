@@ -1,0 +1,34 @@
+.header {
+  h1, div, form {
+    margin: 0;
+    padding: 0;
+  }
+
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    display: inline;
+  }
+
+  .message {
+    color: red;
+  }
+  
+  .authentication {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    form input {
+      margin-right: 1rem;
+    }
+  }
+}

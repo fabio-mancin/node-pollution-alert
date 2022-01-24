@@ -1,0 +1,21 @@
+extends ../dist/layout
+
+block content
+  form.flex-center(
+    action="/sign-up",
+    method="post"
+  )
+    label(
+      for="username"
+    )
+    input#username(
+      placeholder= "Choose a username"
+      name="username"
+      minlength=3
+    )
+    button.button-primary Sign Up
+
+  if message !== ""
+    p #{message}
+
+  a.button.back-button.u-pull-right(href='/back') Back
